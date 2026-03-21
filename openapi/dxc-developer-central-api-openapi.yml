@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  title: DXC Developer Central API
+  description: >-
+    The DXC Developer Central provides APIs and tools for building and
+    integrating with DXC Technology's enterprise platform services. The
+    portal offers open APIs with modular architecture and flexible
+    connectivity designed to reduce legacy dependencies and ensure
+    scalability across various technology environments.
+  version: '2026-01-01'
+  contact:
+    name: DXC Technology
+    url: https://developer.dxc.com/
+externalDocs:
+  description: DXC Developer Central Documentation
+  url: https://developer.dxc.com/
+servers:
+  - url: https://developer.dxc.com/api
+    description: Production
+tags:
+  - name: Platform
+    description: Platform service operations
+  - name: Integration
+    description: Integration and connectivity services
+  - name: Applications
+    description: Application development services
+security:
+  - bearerAuth: []
+paths:
+  /services:
+    get:
+      operationId: listServices
+      summary: List available services
+      description: Retrieve a list of available platform services and APIs.
+      tags:
+        - Platform
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  services:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Service'
+        '401':
+          description: Unauthorized
+  /integrations:
+    get:
+      operationId: listIntegrations
+      summary: List integrations
+      description: Retrieve available integration connectors and adapters.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  integrations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Integration'
+        '401':
+          description: Unauthorized
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Service:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+          enum:
+            - active
+            - deprecated
+            - beta
+    Integration:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        description:
+          type: string
