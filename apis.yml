@@ -1,5 +1,6 @@
 aid: dxc-technology
-url: https://raw.githubusercontent.com/api-evangelist/dxc-technology/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/dxc-technology/refs/heads/main/apis.yml
 apis:
   - aid: dxc-technology:developer-central-api
     name: DXC Developer Central API
@@ -8,7 +9,8 @@ apis:
       - Platform
       - Enterprise
       - Integration
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.dxc.com
     humanURL: https://developer.dxc.com/
     properties:
@@ -22,3 +24,7 @@ apis:
       portal offers open APIs with modular architecture and flexible
       connectivity designed to reduce legacy dependencies and ensure
       scalability across various technology environments.
+description: >-
+  DXC Technology is a global IT services company that helps clients harness the power
+  of innovation to thrive on change, providing application services, business process
+  services, cloud, and security solutions.
