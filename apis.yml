@@ -1,16 +1,14 @@
 aid: dxc-technology
-url: 
-  https://raw.githubusercontent.com/api-evangelist/dxc-technology/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/dxc-technology/refs/heads/main/apis.yml
 apis:
   - aid: dxc-technology:developer-central-api
     name: DXC Developer Central API
     tags:
-      - IT Services
-      - Platform
       - Enterprise
       - Integration
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - IT Services
+      - Platform
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.dxc.com
     humanURL: https://developer.dxc.com/
     properties:

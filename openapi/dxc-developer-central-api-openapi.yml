@@ -18,12 +18,10 @@ servers:
   - url: https://developer.dxc.com/api
     description: Production
 tags:
-  - name: Platform
-    description: Platform service operations
   - name: Integration
     description: Integration and connectivity services
-  - name: Applications
-    description: Application development services
+  - name: Platform
+    description: Platform service operations
 security:
   - bearerAuth: []
 paths:
