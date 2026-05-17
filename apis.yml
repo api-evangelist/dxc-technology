@@ -42,7 +42,7 @@ common:
     url: https://dxc.com
   - type: Portal
     url: https://developer.dxc.com/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/dxc-technology
   - type: LinkedIn
     url: https://www.linkedin.com/company/dxctechnology/
