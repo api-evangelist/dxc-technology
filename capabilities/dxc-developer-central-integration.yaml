@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: DXC Developer Central API — Integration
+  description: 'DXC Developer Central API — Integration. 1 operations. Lead operation: List integrations. Self-contained Naftiko
+    capability covering one Dxc Technology business surface.'
+  tags:
+  - Dxc Technology
+  - Integration
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DXC_TECHNOLOGY_API_KEY: DXC_TECHNOLOGY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: dxc-developer-central-integration
+    baseUri: https://developer.dxc.com/api
+    description: DXC Developer Central API — Integration business capability. Self-contained, no shared references.
+    resources:
+    - name: integrations
+      path: /integrations
+      operations:
+      - name: listintegrations
+        method: GET
+        description: List integrations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.DXC_TECHNOLOGY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: dxc-developer-central-integration-rest
+    port: 8080
+    description: REST adapter for DXC Developer Central API — Integration. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/integrations
+      name: integrations
+      description: REST surface for integrations.
+      operations:
+      - method: GET
+        name: listintegrations
+        description: List integrations
+        call: dxc-developer-central-integration.listintegrations
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: dxc-developer-central-integration-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for DXC Developer Central API — Integration. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-integrations
+      description: List integrations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: dxc-developer-central-integration.listintegrations
+      outputParameters:
+      - type: object
+        mapping: $.
