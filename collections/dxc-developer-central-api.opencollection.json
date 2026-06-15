@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DXC Developer Central API",
+    "version": "2026-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Platform",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.dxc.com/api/services"
+          },
+          "docs": "Retrieve a list of available platform services and APIs."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Integration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List integrations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.dxc.com/api/integrations"
+          },
+          "docs": "Retrieve available integration connectors and adapters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
