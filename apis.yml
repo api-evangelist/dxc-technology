@@ -34,6 +34,8 @@ apis:
       - type: OpenAPI
         url: openapi/dxc-developer-central-api-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/dxc-technology-agentic-access.yml
   - type: DomainSecurity
     url: security/dxc-technology-domain-security.yml
   - type: Authentication
