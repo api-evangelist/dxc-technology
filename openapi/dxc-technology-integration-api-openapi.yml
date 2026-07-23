@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: DXC Developer Central Integration API
+  description: The DXC Developer Central provides APIs and tools for building and integrating with DXC Technology's enterprise platform services. The portal offers open APIs with modular architecture and flexible connectivity designed to reduce legacy dependencies and ensure scalability across various technology environments.
+  version: '2026-01-01'
+  contact:
+    name: DXC Technology
+    url: https://developer.dxc.com/
+servers:
+- url: https://developer.dxc.com/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Integration
+  description: Integration and connectivity services
+paths:
+  /integrations:
+    get:
+      operationId: listIntegrations
+      summary: List integrations
+      description: Retrieve available integration connectors and adapters.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  integrations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Integration'
+        '401':
+          description: Unauthorized
+components:
+  schemas:
+    Integration:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        description:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: DXC Developer Central Documentation
+  url: https://developer.dxc.com/
