@@ -4,7 +4,20 @@ description: >-
   DXC Technology is a global IT services company that helps clients harness the power of innovation to thrive on change,
   providing application services, business process services, cloud, and security solutions.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dxc-technology.png
 tags:
   - IT Services
   - Enterprise
@@ -15,24 +28,30 @@ created: '2026-03-21'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: dxc-technology:developer-central-api
-    name: DXC Developer Central API
-    description: >-
-      The DXC Developer Central provides APIs and tools for building and integrating with DXC Technology's enterprise
-      platform services. The portal offers open APIs with modular architecture and flexible connectivity designed to
-      reduce legacy dependencies and ensure scalability across various technology environments.
-    humanURL: https://developer.dxc.com/
-    baseURL: https://developer.dxc.com
-    tags:
-      - Enterprise
-      - Integration
-      - IT Services
-      - Platform
-    properties:
-      - type: Documentation
-        url: https://developer.dxc.com/
-      - type: OpenAPI
-        url: openapi/dxc-developer-central-api-openapi.yml
+- aid: dxc-technology:dxc-technology-integration-api
+  name: DXC Technology Integration API
+  description: Integration and connectivity services
+  humanURL: https://developer.dxc.com/
+  baseURL: https://developer.dxc.com
+  tags:
+  - Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/dxc-technology-integration-api-openapi.yml
+  - type: Documentation
+    url: https://developer.dxc.com/
+- aid: dxc-technology:dxc-technology-platform-api
+  name: DXC Technology Platform API
+  description: Platform service operations
+  humanURL: https://developer.dxc.com/
+  baseURL: https://developer.dxc.com
+  tags:
+  - Platform
+  properties:
+  - type: OpenAPI
+    url: openapi/dxc-technology-platform-api-openapi.yml
+  - type: Documentation
+    url: https://developer.dxc.com/
 common:
   - type: AgenticAccess
     url: agentic-access/dxc-technology-agentic-access.yml
