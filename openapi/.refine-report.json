@@ -1,0 +1,16 @@
+{
+  "provider": "dxc-technology",
+  "sources": [
+    "dxc-technology-integration-api-openapi.yml",
+    "dxc-technology-platform-api-openapi.yml"
+  ],
+  "outputs": [
+    "dxc-technology-integration-api-openapi.yml",
+    "dxc-technology-platform-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
