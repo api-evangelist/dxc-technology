@@ -4,6 +4,17 @@ description: >-
   DXC Technology is a global IT services company that helps clients harness the power of innovation to thrive on change,
   providing application services, business process services, cloud, and security solutions.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
