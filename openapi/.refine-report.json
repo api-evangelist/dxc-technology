@@ -1,8 +1,7 @@
 {
   "provider": "dxc-technology",
   "sources": [
-    "dxc-technology-integration-api-openapi.yml",
-    "dxc-technology-platform-api-openapi.yml"
+    "_original/dxc-developer-central-api-openapi.yml"
   ],
   "outputs": [
     "dxc-technology-integration-api-openapi.yml",
@@ -11,6 +10,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "dxc-developer-central-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "dxc-technology-integration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dxc-technology-platform-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
