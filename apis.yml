@@ -37,7 +37,7 @@ tags:
   - Integration
 url: https://raw.githubusercontent.com/api-evangelist/dxc-technology/refs/heads/main/apis.yml
 created: '2026-03-21'
-modified: '2026-05-19'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: dxc-technology:dxc-technology-integration-api
@@ -65,6 +65,8 @@ apis:
   - type: Documentation
     url: https://developer.dxc.com/
 common:
+  - url: https://dxc.com/solutions/engineering
+    type: Blog
   - type: AgenticAccess
     url: agentic-access/dxc-technology-agentic-access.yml
   - type: DomainSecurity
