@@ -28,40 +28,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: dxc-technology-openpeppol-certified-service-providers
-  label: OpenPeppol (certified service providers)
-  partner_name: OpenPeppol (certified service providers)
-  category: Peppol service provider
-  type: register
-  channel: standard-directory
-  evidence: https://peppol.org/members/peppol-certified-service-providers/
-  source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: OpenPeppol certified service providers (peppol.org/members/peppol-certified-service-providers)
-    spec_file: null
-    standard: Peppol
-    role: peppol-certified-service-provider
-    registered_name: DXC
-    legal_name: EntServ UK Ltd (DXC)
-    matched_domain: dxc.com
-    matched_by: domain
-    domain_source: contact email domain
-    peppol_authorities:
-    - OpenPeppol
-    countries:
-    - UK
-    certified_products:
-    - product: Access Point
-      lapsed: false
-    - product: SMP
-      lapsed: false
-    signal_note: certified_products = one entry per Peppol-certified SERVICE (Access Point, SMP); authorities and
-      countries are context, never read
-    detected_by: sweep-einvoicing-tax.py
-    detected: '2026-10-15'
-  status: not-a-workflow
-  arazzo: null
 - slug: dxc-technology-aws-partner-network-services
   label: AWS Partner Network (services)
   partner: amazon-web-services
@@ -303,5 +269,68 @@
     other_listings:
     - DXC Technology Services LLC (dxc-technology-services-llc)
     - DXC TECHNOLOGY SERVICES SINGAPORE PTE. LTD (dxc-technology)
+  status: not-a-workflow
+  arazzo: null
+- slug: dxc-technology-openpeppol-certified-service-providers
+  label: OpenPeppol (certified service providers)
+  partner_name: OpenPeppol (certified service providers)
+  category: Peppol service provider
+  type: register
+  channel: standard-directory
+  evidence: https://peppol.org/members/peppol-certified-service-providers/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: OpenPeppol certified service providers (peppol.org/members/peppol-certified-service-providers)
+    spec_file: null
+    standard: Peppol
+    role: peppol-certified-service-provider
+    registered_name: DXC
+    legal_name: EntServ UK Ltd (DXC)
+    matched_domain: dxc.com
+    matched_by: domain
+    domain_source: contact email domain
+    peppol_authorities:
+    - OpenPeppol
+    countries:
+    - UK
+    certified_products:
+    - product: Access Point
+      lapsed: false
+    - product: SMP
+      lapsed: false
+    signal_note: certified_products = one entry per Peppol-certified SERVICE (Access Point, SMP); authorities and
+      countries are context, never read
+    detected_by: sweep-einvoicing-tax.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: dxc-technology-first-forum-of-incident-response-and-security-teams
+  label: FIRST (Forum of Incident Response and Security Teams)
+  partner_name: FIRST (Forum of Incident Response and Security Teams)
+  category: Incident response / PSIRT (FIRST member team)
+  type: register
+  channel: standard-directory
+  evidence: https://www.first.org/members/teams/dxc_technology_iberia_csirt
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FIRST member teams (api.first.org/data/v1/teams, public JSON API)
+    standard: FIRST (Forum of Incident Response and Security Teams) membership
+    spec_file: null
+    role: first-member-team
+    registered_name: DXC
+    matched_domain: dxc.com
+    matched_by: domain
+    teams:
+    - id: dxc_technology_iberia_csirt
+      team: DXC Technology Iberia CSIRT
+      team_type: CSIRT, SOC
+      member_since: March 22, 2019
+      country: ES
+    signal_note: FIRST full membership of an incident-response / product-security team = participation; team_type
+      names CSIRT / PSIRT / SOC; never a count
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
   status: not-a-workflow
   arazzo: null
